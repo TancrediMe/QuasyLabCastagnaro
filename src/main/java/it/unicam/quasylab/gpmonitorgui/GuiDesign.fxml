@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="1080.0" maxWidth="1920.0" minHeight="400.0" minWidth="600.0" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unicam.quasylab.gpmonitorgui.Controller">
+    <children>
+        <Button fx:id="ImportButton" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#importConfig" text="Import From Config ..." />
+        <Button fx:id="ExportButton" layoutX="159.0" layoutY="72.0" mnemonicParsing="false" onAction="#exportData" text="Export Data ..." />
+        <Button fx:id="StartButton" layoutX="845.0" layoutY="73.0" mnemonicParsing="false" onAction="#startReading" text="Start" />
+        <Button fx:id="StopButton" layoutX="919.0" layoutY="73.0" mnemonicParsing="false" onAction="#stopReading" text="Stop" />
+        <Button fx:id="SetNetworkButton" layoutX="239.0" layoutY="13.0" mnemonicParsing="false" onAction="#setNetwork" text="Set Network" />
+        <Button fx:id="AddDeviceButton" layoutX="327.0" layoutY="137.0" mnemonicParsing="false" onAction="#addDevice" text="Add Device" />
+        <Button fx:id="RemoveDeviceButton" layoutX="448.0" layoutY="137.0" mnemonicParsing="false" onAction="#removeDevice" text="Remove Device" />
+        <Button fx:id="RemoveFilterButton" layoutX="145.0" layoutY="137.0" mnemonicParsing="false" onAction="#removeFilter" text="Remove Filter" />
+        <Button fx:id="AddFilterButton" layoutX="32.0" layoutY="137.0" mnemonicParsing="false" onAction="#addFilter" text="Add Filter" />
+        <SplitPane dividerPositions="0.2925636007827789" layoutY="186.0" prefHeight="583.0" prefWidth="1024.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <TreeView fx:id="FiltersView" layoutY="-1.0" prefHeight="581.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <SplitPane dividerPositions="0.4295774647887324" layoutY="-7.0" prefHeight="583.0" prefWidth="712.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <TreeView fx:id="DevicesVew" layoutX="4.0" layoutY="7.0" prefHeight="581.0" prefWidth="207.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="581.0" prefWidth="471.0">
+                                    <children>
+                                        <TextArea fx:id="LogBox" editable="false" prefHeight="581.0" prefWidth="493.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <Button fx:id="RefreshButton" layoutX="703.0" layoutY="73.0" mnemonicParsing="false" onAction="#refresh" text="Refresh ALL" />
+    </children>
+</Pane>

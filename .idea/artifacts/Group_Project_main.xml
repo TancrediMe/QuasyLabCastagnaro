@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="Group_Project.main">
+    <output-path>$PROJECT_DIR$/out/artifacts/Group_Project_main</output-path>
+    <root id="root">
+      <element id="archive" name="Group_Project_main.jar">
+        <element id="module-output" name="Group_Project.main" />
+      </element>
+    </root>
+  </artifact>
+</component>
